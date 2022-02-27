@@ -231,6 +231,13 @@ def add_like(message_id):
     if liked_message.user_id == g.user.id:
         return abort(403)
 
+    # if liked_message in g.user.likes:
+    #     flash("message unliked!", "danger")
+    #     g.user.likes = [like for like in g.user.likes if like != liked_message]
+    # else:
+    #     flash("message liked!", "success")
+    #     g.user.likes.append(liked_message)
+
     user_likes = g.user.likes
 
     if liked_message in user_likes:
