@@ -74,7 +74,7 @@ class User(db.Model):
     image_url = db.Column(
         db.Text,
         default="/static/images/default-pic.png",
-    )
+    ) 
 
     header_image_url = db.Column(
         db.Text,
